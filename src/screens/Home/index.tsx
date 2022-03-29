@@ -9,6 +9,7 @@ import {
 
 import { CardBook } from "../../components/CardBook";
 import { Footer } from "../../components/Footer";
+import { HeaderWithTextInput } from "../../components/HeaderWithTextInput";
 
 export default function Home() {
   const [nameBook, setNameBook] = useState<string>("");
@@ -28,14 +29,10 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.searchBarContainer}>
-        <TextInput
-          style={styles.SeatchTextInput}
-          placeholder="Busque por um livro"
-          value={nameBook}
-          onChangeText={(searchText) => setNameBook(searchText)}
-        />
-      </View>
+      <HeaderWithTextInput
+        value={nameBook}
+        onChangeText={(text) => setNameBook(text)}
+      />
 
       <View style={styles.listBooksContainer}>
         <Text>Pesquise por algum livro para obter resultados...</Text>
