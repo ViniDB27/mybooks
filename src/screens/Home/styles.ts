@@ -29,5 +29,6 @@ export const styles = StyleSheet.create({
   scrollView: {
     width: "100%",
     marginLeft: 25,
-  }
+    marginTop: 10,
+  },
 });

@@ -38,6 +38,6 @@ export const styles = StyleSheet.create({
   },
   textContainer: {
     flex: 2,
-    alignItems: "center",
+    paddingLeft: 15,
   },
 });

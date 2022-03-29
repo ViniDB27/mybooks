@@ -8,6 +8,7 @@ import {
 } from "../../services/googleBookApi/listBooks.service";
 
 import { CardBook } from "../../components/CardBook";
+import { Footer } from "../../components/Footer";
 
 export default function Home() {
   const [nameBook, setNameBook] = useState<string>("");
@@ -40,9 +41,12 @@ export default function Home() {
         <Text>Pesquise por algum livro para obter resultados...</Text>
 
         <ScrollView style={styles.scrollView}>
-          {listBooks.map((book) => <CardBook book={book} />)}
+          {listBooks.map((book) => (
+            <CardBook book={book} />
+          ))}
         </ScrollView>
       </View>
+      <Footer />
     </View>
   );
 }
