@@ -6,11 +6,12 @@ import { ListBookItem } from "../../services/googleBookApi/listBooks.service";
 
 type CardBookProps = {
   book: ListBookItem;
+  key?: string;
 };
 
-export const CardBook = ({ book }: CardBookProps) => {
+export const CardBook = ({ book, key }: CardBookProps) => {
   return (
-    <View key={book.id} style={styles.bookItem}>
+    <View key={key} style={styles.bookItem}>
       <View style={styles.bookImageContainer}>
         <Image
           style={styles.bookImage}
