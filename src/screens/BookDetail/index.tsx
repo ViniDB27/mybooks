@@ -2,36 +2,23 @@ import { useState } from "react";
 import { Text, View, Image } from "react-native";
 import Icon from "@expo/vector-icons/MaterialIcons";
 import { styles } from "./styles";
+import { HeaderWithOnlyText } from "../../components/HeaderWithOnlyText";
+import { SessionInfoBookDetail } from "../../components/SessioInfoBookDetail";
 
 export default function BookDetail() {
   const [favorite, setFavorite] = useState<boolean>(false);
 
   return (
     <View style={styles.container}>
-      <View style={styles.topBar}>
-        <Icon
-          srt={styles.icon}
-          name={favorite ? "star" : "star-border"}
-          size={26}
-          color="white"
-        />
-        <Text style={styles.title}>O Hobbit</Text>
-      </View>
+      <HeaderWithOnlyText text="O Hobbit" />
       <View style={styles.body}>
-        <View style={styles.sessionHeader}>
-          <View style={styles.imageContainer}>
-            <Image
-              style={styles.image}
-              source={{
-                uri: "https://books.google.com/books/content?id=2LeZDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-              }}
-            />
-          </View>
-          <View style={styles.textContainer}>
-            <Text>Publicadora: HarperCollins Brasil</Text>
-            <Text>Autor: J.R.R. Tolkien</Text>
-          </View>
-        </View>
+        <SessionInfoBookDetail
+          imageUrl={
+            "https://books.google.com/books/content?id=2LeZDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+          }
+          publisher={"HarperCollins Brasil"}
+          author={"J.R.R. Tolkien"}
+        />
         <View>
           <Text>
             Bilbo Bolseiro era um dos mais respeitáveis hobbits de todo o
