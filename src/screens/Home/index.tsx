@@ -7,7 +7,6 @@ import {
   ListBookItem,
 } from "../../services/googleBookApi/listBooks.service";
 
-// import { Footer } from "../../components/Footer";
 import { HeaderWithTextInput } from "../../components/HeaderWithTextInput";
 import { ListOfBooks } from "../../components/ListOfBooks";
 
@@ -40,7 +39,6 @@ export default function Home({ navigation }: any) {
       />
 
       <ListOfBooks listBooks={listBooks} onSlectedBook={handleBookDetail} />
-      {/* <Footer /> */}
     </View>
   );
 }

@@ -1,19 +1,16 @@
-import Home from "../Home";
-import BookDetail from "../BookDetail";
+import Favorites from "../../screens/Favorites";
+import BookDetail from "../../screens/BookDetail";
 
 import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 
-export default function HomeStack() {
+export default function FavoriteStack() {
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
           backgroundColor: "#0AF",
-          borderBottomColor: "#0AF",
-          borderColor: "#0AF",
-          marginBottom: 0,
         },
         headerTintColor: "#fff",
         headerTitleStyle: {
@@ -22,10 +19,10 @@ export default function HomeStack() {
       }}
     >
       <Stack.Screen
-        name="home"
-        component={Home}
+        name="favorite"
+        component={Favorites}
         options={{
-          title: "Procurar Livros",
+          title: "Favoritos",
         }}
       />
       <Stack.Screen

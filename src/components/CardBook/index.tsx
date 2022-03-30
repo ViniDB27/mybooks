@@ -9,10 +9,10 @@ type CardBookProps = {
   onSlectedBook: (book: ListBookItem) => void;
 };
 
-export const CardBook = ({ book, key, onSlectedBook }: CardBookProps) => {
+export const CardBook = ({ book, onSlectedBook }: CardBookProps) => {
   return (
     <TouchableOpacity onPress={() => onSlectedBook(book)}>
-      <View key={key} style={styles.bookItem}>
+      <View style={styles.bookItem}>
         <View style={styles.bookImageContainer}>
           <Image
             style={styles.bookImage}

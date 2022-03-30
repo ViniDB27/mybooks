@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "@expo/vector-icons/MaterialIcons";
 
 import HomeStack from "../HomeStack";
-import Favorites from "../Favorites";
+import FavoriteStack from "../FavoriteStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +27,7 @@ export default function Tabs() {
       />
       <Tab.Screen
         name="favorites"
-        component={Favorites}
+        component={FavoriteStack}
         options={{
           tabBarLabel: "Favoritos",
           tabBarIcon: ({ color, size }) => (
