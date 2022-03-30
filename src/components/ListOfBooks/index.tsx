@@ -19,7 +19,7 @@ export const ListOfBooks = ({ listBooks, onSlectedBook }: ListOfBooksProps) => {
           ))}
         </ScrollView>
       ) : (
-        <Text>Pesquise por algum livro para obter resultados...</Text>
+        <Text>No momento nenhum livro listado...</Text>
       )}
     </View>
   );

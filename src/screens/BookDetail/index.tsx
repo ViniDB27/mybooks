@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { Text, View, ScrollView } from "react-native";
 import { styles } from "./styles";
 import { HeaderWithOnlyText } from "../../components/HeaderWithOnlyText";
@@ -11,7 +11,6 @@ export default function BookDetail({ route }: any) {
   const { isFavorite } = useContext(BookContext);
 
   const book: ListBookItem = route.params.book;
-  const [favorite, setFavorite] = useState<boolean>(false);
 
   return (
     <View style={styles.container}>
@@ -20,7 +19,7 @@ export default function BookDetail({ route }: any) {
         <SessionInfoBookDetail
           imageUrl={book?.volumeInfo?.imageLinks?.thumbnail}
           publisher={book?.volumeInfo?.publisher}
-          authors={book?.volumeInfo?.authors}
+          authors={book?.volumeInfo?.authors ?? []}
           favorite={isFavorite(book)}
           book={book}
         />
