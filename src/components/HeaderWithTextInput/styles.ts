@@ -2,12 +2,11 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   searchBarContainer: {
-    height: 150,
+    height: 70,
     width: "100%",
     backgroundColor: "#0Af",
     alignItems: "center",
-    justifyContent: "flex-end",
-    paddingBottom: 35,
+    justifyContent: "center",
   },
   SeatchTextInput: {
     height: 40,

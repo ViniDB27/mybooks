@@ -7,11 +7,12 @@ import {
   ListBookItem,
 } from "../../services/googleBookApi/listBooks.service";
 
-import { Footer } from "../../components/Footer";
+// import { Footer } from "../../components/Footer";
 import { HeaderWithTextInput } from "../../components/HeaderWithTextInput";
 import { ListOfBooks } from "../../components/ListOfBooks";
 
-export default function Home() {
+export default function Home({ navigation }: any) {
+  const { navigate } = navigation;
   const [nameBook, setNameBook] = useState<string>("");
   const [listBooks, setListBooks] = useState<ListBookItem[]>([]);
 
@@ -27,6 +28,10 @@ export default function Home() {
     searchBooks();
   }, [nameBook]);
 
+  const handleBookDetail = (book: ListBookItem) => {
+    navigate("details", { book });
+  };
+
   return (
     <View style={styles.container}>
       <HeaderWithTextInput
@@ -34,8 +39,8 @@ export default function Home() {
         onChangeText={(text) => setNameBook(text)}
       />
 
-      <ListOfBooks listBooks={listBooks} />
-      <Footer />
+      <ListOfBooks listBooks={listBooks} onSlectedBook={handleBookDetail} />
+      {/* <Footer /> */}
     </View>
   );
 }

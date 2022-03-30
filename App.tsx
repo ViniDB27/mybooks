@@ -1,6 +1,10 @@
-import Home from "./src/screens/Home";
-import BookDetail from "./src/screens/BookDetail";
+import Tabs from "./src/screens/Tabs";
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
-  return <BookDetail />;
+  return (
+    <NavigationContainer>
+      <Tabs />
+    </NavigationContainer>
+  );
 }
