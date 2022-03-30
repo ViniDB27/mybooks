@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SessionInfoBookDetail /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "height": 200,
+      "marginBottom": 25,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "Mock",
+        }
+      }
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 2,
+        "justifyContent": "center",
+        "paddingLeft": 15,
+      }
+    }
+  >
+    <Text>
+      Publicadora: 
+      Mock
+    </Text>
+    <Text>
+      Autor: 
+      Mock
+    </Text>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#0AF",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "space-evenly",
+            "marginTop": 10,
+            "width": 120,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "#FFFFFF",
+              "fontSize": 15,
+              "fontWeight": "bold",
+            }
+          }
+        >
+          Favoritar
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

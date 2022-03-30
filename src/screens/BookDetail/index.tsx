@@ -17,9 +17,6 @@ export default function BookDetail({ route }: any) {
       <HeaderWithOnlyText text={book?.volumeInfo?.title} />
       <View style={styles.body}>
         <SessionInfoBookDetail
-          imageUrl={book?.volumeInfo?.imageLinks?.thumbnail}
-          publisher={book?.volumeInfo?.publisher}
-          authors={book?.volumeInfo?.authors ?? []}
           favorite={isFavorite(book)}
           book={book}
         />

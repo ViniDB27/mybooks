@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderWithTextInput /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#0Af",
+      "height": 70,
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Busque por um livro"
+    rejectResponderTermination={true}
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 5,
+        "height": 40,
+        "paddingLeft": 10,
+        "width": "80%",
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="Mock"
+  />
+</View>
+`;

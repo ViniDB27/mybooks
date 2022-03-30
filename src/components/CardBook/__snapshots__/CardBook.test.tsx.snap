@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardBook /> renders correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 5,
+        "flexDirection": "row",
+        "height": 85,
+        "marginVertical": 10,
+        "overflow": "hidden",
+        "padding": 5,
+        "width": "85%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": "100%",
+          "marginRight": 5,
+          "width": 60,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "uri": "Mock",
+          }
+        }
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "marginBottom": 5,
+          }
+        }
+      >
+        Mock
+      </Text>
+      <Text>
+        Mock...
+      </Text>
+    </View>
+  </View>
+</View>
+`;

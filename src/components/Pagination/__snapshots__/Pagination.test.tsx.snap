@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#0AF",
+      "flexDirection": "row",
+      "height": 60,
+      "justifyContent": "center",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+          "height": 25,
+          "justifyContent": "center",
+          "width": 25,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 22,
+            "marginHorizontal": 5,
+          }
+        }
+      >
+        &lt;
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginHorizontal": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "fontSize": 22,
+          "marginHorizontal": 5,
+          "textDecorationLine": "underline",
+        }
+      }
+    >
+      1
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 22,
+          "marginHorizontal": 5,
+        }
+      }
+    >
+      2
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+          "height": 25,
+          "justifyContent": "center",
+          "width": 25,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 22,
+            "marginHorizontal": 5,
+          }
+        }
+      >
+        &gt;
+      </Text>
+    </View>
+  </View>
+</View>
+`;
