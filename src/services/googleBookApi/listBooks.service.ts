@@ -1,4 +1,5 @@
 import { googleBookApi } from "./googleBookApi.service";
+import { stringify } from 'querystring'
 
 export type ListBookItem = {
   kind: string;
@@ -26,5 +27,14 @@ export type ListBookResponse = {
   items: ListBookItem[];
 };
 
-export const getListBooks = (name: string) =>
-  googleBookApi.get<ListBookResponse>(`/books/v1/volumes?q=${name}`);
+export const getListBooks = (name: string, startIndex: number = 0) => {
+
+  const params = stringify({
+    q: name,
+    startIndex,
+    key: "AIzaSyBQVEWc916-FORdmraUG40iOl4BiFxbWAk",
+  })
+
+
+  return googleBookApi.get<ListBookResponse>(`/books/v1/volumes?${params}`);
+}
