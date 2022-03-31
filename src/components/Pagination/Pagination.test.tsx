@@ -19,7 +19,7 @@ describe("<Pagination />", () => {
     expect(tree).not.toEqual(null);
   });
 
-  it("verify if have 1 child", () => {
+  it("verify if have 3 children", () => {
     expect(tree.children?.length).toEqual(3);
   });
 
