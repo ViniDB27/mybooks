@@ -1,4 +1,4 @@
-import render from "react-test-renderer";
+import render, { ReactTestRendererJSON } from "react-test-renderer";
 
 import { Pagination } from "./index";
 
@@ -13,9 +13,21 @@ describe("<Pagination />", () => {
         onChange={() => {}}
       />
     )
-    .toJSON();
+    .toJSON() as ReactTestRendererJSON;
+
+  it("verify if component is not null ", () => {
+    expect(tree).not.toEqual(null);
+  });
+
+  it("verify if have 1 child", () => {
+    expect(tree.children?.length).toEqual(3);
+  });
 
   it("renders correctly", () => {
     expect(tree).toMatchSnapshot();
+  });
+
+  it("verify if type is View", () => {
+    expect(tree.type).toEqual("View");
   });
 });
