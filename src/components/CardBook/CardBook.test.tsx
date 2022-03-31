@@ -27,8 +27,6 @@ describe("<CardBook />", () => {
     .create(<CardBook book={bookMock} onSlectedBook={() => {}} />)
     .toJSON() as ReactTestRendererJSON;
 
-  console.log(tree);
-
   it("verify if component is not null ", () => {
     expect(tree).not.toEqual(null);
   });
