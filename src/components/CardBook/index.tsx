@@ -5,7 +5,6 @@ import { ListBookItem } from "../../services/googleBookApi/listBooks.service";
 
 type CardBookProps = {
   book: ListBookItem;
-  key?: string;
   onSlectedBook: (book: ListBookItem) => void;
 };
 

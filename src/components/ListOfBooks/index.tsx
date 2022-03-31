@@ -14,8 +14,10 @@ export const ListOfBooks = ({ listBooks, onSlectedBook }: ListOfBooksProps) => {
     <View style={styles.listBooksContainer}>
       {listBooks.length > 0 ? (
         <ScrollView style={styles.scrollView}>
-          {listBooks.map((book) => (
-            <CardBook book={book} key={book.id} onSlectedBook={onSlectedBook} />
+          {listBooks.map((book, index) => (
+            <View key={index}>
+              <CardBook book={book} onSlectedBook={onSlectedBook} />
+            </View>
           ))}
         </ScrollView>
       ) : (
