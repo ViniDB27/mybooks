@@ -21,14 +21,37 @@ export default function Home({ navigation }: any) {
   const [page, setPage] = useState<number>(1);
   const [indexBooks, setIndexBooks] = useState<number>(0);
 
+  const [currentTimeOut, setCurrentTimeOut] = useState<any>(null);
+
+  const [loading, setLoading] = useState<boolean>(false);
+
   useEffect(() => {
     const searchBooks = async () => {
-      if (nameBook) {
-        const response = await getListBooks(nameBook, indexBooks);
-        const data = response.data;
-        setListBooks(data.items);
-        setItemsQt(data.totalItems);
+      setLoading(true);
+
+      if (currentTimeOut !== null) {
+        clearTimeout(currentTimeOut);
       }
+
+      const newTimeOut = setTimeout(() => {
+        if (nameBook.trim()) {
+          getListBooks(nameBook, indexBooks)
+            .then((response) => {
+              const data = response.data;
+              setListBooks(data.items);
+              setItemsQt(data.totalItems);
+              setCurrentTimeOut(null);
+            })
+            .catch((err) =>
+              console.log("Erro no Google Books Reques: ", { ...err })
+            )
+            .finally(() => setLoading(false));
+        } else {
+          setLoading(false);
+        }
+      }, 2000);
+
+      setCurrentTimeOut(newTimeOut);
     };
 
     searchBooks();
@@ -45,7 +68,12 @@ export default function Home({ navigation }: any) {
         onChangeText={(text) => setNameBook(text)}
       />
 
-      <ListOfBooks listBooks={listBooks} onSlectedBook={handleBookDetail} />
+      <ListOfBooks
+        loading={loading}
+        listBooks={listBooks}
+        onSlectedBook={handleBookDetail}
+      />
+
       <Pagination
         page={page}
         itensCount={itemsQt}

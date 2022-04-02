@@ -6,22 +6,35 @@ import { styles } from "./styles";
 
 type ListOfBooksProps = {
   listBooks: ListBookItem[];
+  loading: boolean;
   onSlectedBook: (book: ListBookItem) => void;
 };
 
-export const ListOfBooks = ({ listBooks, onSlectedBook }: ListOfBooksProps) => {
+export const ListOfBooks = ({
+  listBooks,
+  loading,
+  onSlectedBook,
+}: ListOfBooksProps) => {
   return (
     <View style={styles.listBooksContainer}>
-      {listBooks.length > 0 ? (
-        <ScrollView style={styles.scrollView}>
-          {listBooks.map((book, index) => (
-            <View key={index}>
-              <CardBook book={book} onSlectedBook={onSlectedBook} />
-            </View>
-          ))}
-        </ScrollView>
+      {loading ? (
+        <View>
+          <Text>Carregando..</Text>
+        </View>
       ) : (
-        <Text>No momento nenhum livro listado...</Text>
+        <>
+          {listBooks.length > 0 ? (
+            <ScrollView style={styles.scrollView}>
+              {listBooks.map((book, index) => (
+                <View key={index}>
+                  <CardBook book={book} onSlectedBook={onSlectedBook} />
+                </View>
+              ))}
+            </ScrollView>
+          ) : (
+            <Text>No momento nenhum livro listado...</Text>
+          )}
+        </>
       )}
     </View>
   );
